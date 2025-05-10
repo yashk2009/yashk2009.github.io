@@ -5,16 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Document</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
     body {
       margin: 0;
       font-family: 'Fredoka One', sans-serif;
       background: linear-gradient(135deg, #f9d5ec, #ffe0ac);
       overflow-x: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .phone-frame {
+      width: 100%;
+      max-width: 400px;
+      height: 90vh;
+      background-color: #fff;
+      border-radius: 30px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
       text-align: center;
     }
 
     #cover {
-      padding: 100px 20px;
+      padding: 50px 20px;
       animation: float 2s ease-in-out infinite alternate;
     }
 
@@ -38,24 +57,26 @@
     }
 
     #card {
-      padding: 30px;
+      padding: 20px 10px;
       animation: flipIn 1s ease-in-out;
+      overflow-y: auto;
+      flex-grow: 1;
     }
 
     .page {
-      margin: 30px auto;
-      max-width: 600px;
+      margin: 0 auto 20px;
+      max-width: 360px;
       padding: 20px;
       background-color: white;
       border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       animation: fadeIn 1s ease-in-out;
     }
 
     .page img {
-      width: 200px;
+      width: 180px;
       border-radius: 12px;
-      margin: 20px 0;
+      margin: 15px 0;
     }
 
     .emoji {
@@ -73,21 +94,21 @@
     }
 
     .cake-img {
-      width: 90px;
+      width: 70px;
       position: absolute;
       animation: spinAround 5s infinite linear, pulse 3s ease-in-out infinite alternate;
       z-index: 2;
     }
 
     .cake1 {
-      top: 30px;
-      left: 20px;
+      top: 10px;
+      left: 10px;
       animation-delay: 0s, 0.5s;
     }
 
     .cake2 {
-      top: 30px;
-      right: 20px;
+      top: 10px;
+      right: 10px;
       animation-delay: 1s, 1s;
     }
 
@@ -101,68 +122,72 @@
       100% { transform: scale(1.1); }
     }
 
-    #rbtn{
-      width: 180px;
+    #rbtn {
+      width: 160px;
       text-align: center;
-      font-size: larger;
-      margin:5px;
+      font-size: 1em;
+      margin: 10px auto;
       border-radius: 25px;
-      height: 50px;
-      
-
-
+      height: 45px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-<!-- Mystery Cover -->
-<div id="cover">
-  <h1>🎁 Surprise Inside!</h1>
-  <button id="openCardBtn">Open Your Birthday Surprise</button>
-</div>
 
-<!-- Birthday Card Content -->
-<div id="card" class="hidden">
-  <div class="page">
-    <h2>🎂 Happy Birthday Vaishnavi brooo✨✨!</h2>
-    <p>You’re now one year closer to being a cool grandma bishh😂</p>
-    <div class="card-inner">
-      <img src="Friend.jpg" alt="Vaishnavi" class="profile-pic">
-      <img src="cake1.png" alt="Cake 1" class="cake-img cake1">
-      <img src="cake2.png" alt="Cake 2" class="cake-img cake2">
-      <p class="message">I am indebted to your parents for giving me such a great buddy..
-        Keep reading, there's more!
-      </p>
+<div class="phone-frame">
+  <!-- Mystery Cover -->
+  <div id="cover">
+    <h1>🎁 Surprise Inside!</h1>
+    <button id="openCardBtn">Open Your Birthday Surprise</button>
+  </div>
+
+  <!-- Birthday Card Content -->
+  <div id="card" class="hidden">
+    <div class="page">
+      <h2>🎂 Happy Birthday Vaishnavi brooo✨✨!</h2>
+      <p>You’re now one year closer to being a cool grandma bishh😂</p>
+      <div class="card-inner">
+        <img src="Friend.jpg" alt="Vaishnavi" class="profile-pic">
+        <img src="cake1.png" alt="Cake 1" class="cake-img cake1">
+        <img src="cake2.png" alt="Cake 2" class="cake-img cake2">
+        <p class="message">I am indebted to your parents for giving me such a great buddy..
+          Keep reading, there's more!
+        </p>
+      </div>
+      <p class="emoji">🎉🎈🎊✨</p>
+      <button class="nextPage">Next</button>
     </div>
-    <p class="emoji">🎉🎈🎊✨</p>
-    <button class="nextPage">Next</button>
+    <div class="page hidden">
+      <h2>🧁 To those small gossips, to all those happy moments!</h2>
+      <p>Its been almost 2-3 years since we have been friends🎉 and trust me, many ups and downs entered ,
+        it was just yesterday you were just a friend but today you stand at a very important place in my life.
+        Your mere existence is a good will bro😌😌live up and stay happy and feel good to have a friend like me bitch!
+        i take care of you guys soo much but nobody cares for me 🥲 Anyways!Thanks to your parents for waiting till
+        i was born 😂before having you !
+      </p>
+      <p class="emoji">🍰💃🫂🦄</p>
+      <button class="nextPage">Next</button>
+    </div>
+    <div class="page hidden">
+      <h2>💖 Pdh pdhkr bore hogyi?😂 Acha chalo last message from me..</h2>
+      <p>Stay Majestic foreever bro! Don't make your strenght as your insecurity, you are tall, your eyebrows
+        look reallyy goodd!! and you are someone who can keep up to our expectations! Me is always support you bitch👊🏻!
+        🥹And yes , i would absolutely love to be your kid's MAMA 💖💖!!
+      </p>
+      <p class="emoji">🌟💕🎶🧸</p>
+      <button id="rbtn" onclick="window.location.reload()">Replay</button>
+    </div>
   </div>
-  <div class="page hidden">
-    <h2>🧁 To those small gossips, to all those happy moments!</h2>
-    <p>Its been almost 2-3 years since we have been friends🎉 and trust me, many ups and downs entered ,
-      it was just yesterday you were just a friend but today you stand at a very important place in my life.
-      Your mere existence is a good will bro😌😌live up and stay happy and feel good to have a friend like me bitch!
-      i take care of you guys soo much but nobody cares for me 🥲 Anyways!Thanks to your parents for waiting till
-      i was born 😂before having you !
-    </p>
-    <p class="emoji">🍰💃🫂🦄</p>
-    <button class="nextPage">Next</button>
-  </div>
-  <div class="page hidden">
-    <h2>💖 Pdh pdhkr bore hogyi?😂 Acha chalo last message from me..</h2>
-    <p>Stay Majestic foreever bro! Don't make your strenght as your insecurity, you are tall, your eyebrows
-      look reallyy goodd!! and you are someone who can keep up to our expectations! Me is always support you bitch👊🏻!
-      🥹And yes , i would absolutely love to be your kid's MAMA 💖💖!!
-    </p>
-    <p class="emoji">🌟💕🎶🧸</p>
-    <button id="rbtn" onclick="window.location.reload()">Replay</button>
-  </div>
-</div>
 
-<!-- Background Music -->
-<audio id="bgm" loop>
-  <source src="bdmusic.mp3" type="audio/mpeg">
-</audio>
+  <!-- Background Music -->
+  <audio id="bgm" loop>
+    <source src="bdmusic.mp3" type="audio/mpeg">
+  </audio>
+</div>
 
 <!-- Confetti script -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
